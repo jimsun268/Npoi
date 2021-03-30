@@ -1,0 +1,38 @@
+﻿<metro:MetroWindow x:Class="WpfApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp.Views"
+        mc:Ignorable="d"
+        GlowBrush="{DynamicResource AccentColorBrush}"   
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:region="clr-namespace:InfrastructureLibary.Constants;assembly=InfrastructureLibary"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"        
+        prism:ViewModelLocator.AutoWireViewModel="True"         
+        Title="MainWindow"
+        Height="700"  
+        Width="800" 
+        WindowStartupLocation="CenterScreen"
+                   TitleAlignment="Center">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadingCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <metro:MetroWindow.Flyouts>
+        <metro:FlyoutsControl prism:RegionManager.RegionName="{x:Static region:RegionNames.FlyoutRegion}" />
+    </metro:MetroWindow.Flyouts>
+    <metro:MetroWindow.RightWindowCommands>
+        <metro:WindowCommands prism:RegionManager.RegionName="{x:Static region:RegionNames.RightWindowRegion}" />
+    </metro:MetroWindow.RightWindowCommands>
+    <metro:MetroWindow.LeftWindowCommands>
+        <metro:WindowCommands prism:RegionManager.RegionName="{x:Static region:RegionNames.LeftWindowRegion}"/>
+    </metro:MetroWindow.LeftWindowCommands>
+    <metro:MetroContentControl>
+        <Grid Height="650"  >
+            <ContentControl x:Name="LandControlRegion"  prism:RegionManager.RegionName="{x:Static region:RegionNames.MainShowRegion}" Margin="10,5,10,5" Grid.Column="1" />
+        </Grid>
+    </metro:MetroContentControl>
+</metro:MetroWindow>

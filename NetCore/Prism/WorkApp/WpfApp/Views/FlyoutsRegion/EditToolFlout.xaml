@@ -1,0 +1,23 @@
+﻿<metro:Flyout x:Class="WpfApp.Views.FlyoutsRegion.EditToolFlout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp.Views.FlyoutsRegion"
+             mc:Ignorable="d" 
+             xmlns:const="clr-namespace:InfrastructureLibary.Constants;assembly=InfrastructureLibary"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:Converters="clr-namespace:InfrastructureLibary.Converters;assembly=InfrastructureLibary"             
+              Position="Bottom"  
+              Height="60"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <UniformGrid Columns="5" Rows="1">
+        <Button Command="{Binding GoBackCommand}"  Width="50" Height="50" Content="Back"/>
+        <Button Command="{Binding EditCommands.NavigateCommand}" CommandParameter="1" Width="50" Height="50" Content="Save"/>
+        <Button Width="50" Height="50" Content="Del"/>
+        <Button Width="50" Height="50" Content="Add"/>
+        <Button Width="50" Height="50" Content="Excel"/>
+    </UniformGrid>
+</metro:Flyout>

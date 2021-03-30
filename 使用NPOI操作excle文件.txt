@@ -1,0 +1,8 @@
+WpfNpoi 分离同一单元格不同颜色字体
+WpfNpoi(net) 分离同一单元格不同颜色字体net4.0版本 废弃
+ExectWork 向模板填充数据
+Net 使用.NET4.0兼容windowsxp 
+
+NetCore .Net5使用prism Npoi 操作集合
+     Infrastructure 公共类库
+     WorkApp        主程序

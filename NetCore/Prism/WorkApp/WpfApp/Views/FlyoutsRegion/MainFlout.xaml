@@ -1,0 +1,22 @@
+﻿<metro:Flyout x:Class="WpfApp.Views.FlyoutsRegion.MainFlout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp.Views.FlyoutsRegion"
+             mc:Ignorable="d" 
+             xmlns:const="clr-namespace:InfrastructureLibary.Constants;assembly=InfrastructureLibary"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:Converters="clr-namespace:InfrastructureLibary.Converters;assembly=InfrastructureLibary"             
+              Position="Top"  
+              Height="100"
+             prism:ViewModelLocator.AutoWireViewModel="True" >
+    <UniformGrid Columns="4">
+        <Button Command="{Binding ApplicationCommands.NavigateCommand}" CommandParameter="{x:Static const:RegionNames.MainShowRegion}" Width="90" Height="90"/>
+        <Button Command="{Binding ApplicationCommands.NavigateCommand}" CommandParameter="{x:Static const:RegionNames.LandInformationListRegion}" Grid.Column="1" Width="90" Height="90"/>
+        <Button Command="{Binding ApplicationCommands.NavigateCommand}" CommandParameter="{x:Static const:RegionNames.LandInformationListRegion}" Grid.Row="1" Width="90" Height="90"/>
+        <Button Command="{Binding ApplicationCommands.NavigateCommand}" CommandParameter="{x:Static const:RegionNames.LandInformationListRegion}" Grid.Row="1" Grid.Column="1" Width="90" Height="90"/>
+    </UniformGrid>
+</metro:Flyout>
