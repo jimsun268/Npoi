@@ -250,7 +250,6 @@ namespace ExectWork
                         break;
                 }
             }
-            else targetCell.SetCellValue(""); 
 
 
         }
